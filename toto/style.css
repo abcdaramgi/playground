@@ -1,28 +1,59 @@
-html{
-    height: 200%
-}
-
-body{
+body {
     margin: 0;
+
+    background-color: #e3ef89;
 }
 
-header{
+nav {
     position: fixed;
     width: 100%;
-
-    background-color: red;
-
     z-index: 1;
 }
 
-.header_inner{
-    display: flex;
+button {
+    padding: 0;
 }
 
-.root{
-    min-width: 1100px;
-    width: 1100px;
+.header_outer {
+    background: #6e6e6e;
+    width: 100%;
+    min-width: 783px;
+}
+
+.header_inner {
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 52px;
+}
+
+.header_sex {
+    margin: 0;
+    height: 100%
+}
+
+.nav_btn {
+    border: none;
+    background-color: #6e6e6e;
+
+    width: 200px;
     height: 100%;
 
+    border-radius: 4px 4px 0 0;
+}
 
+.chk_btn {
+    background-color: #e3ef89;
+}
+
+.non_btn {
+    background-color: white;
+    position: relative;
+    top: 8px;
+
+    height: 80%;
 }
