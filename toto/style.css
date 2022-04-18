@@ -1,0 +1,28 @@
+html{
+    height: 200%
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+
+    background-color: red;
+
+    z-index: 1;
+}
+
+.header_inner{
+    display: flex;
+}
+
+.root{
+    min-width: 1100px;
+    width: 1100px;
+    height: 100%;
+
+
+}
