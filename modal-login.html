@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>테스트필드</title>
+    <link rel="stylesheet" href="modal-login-css.css">
+    <script src="modal-login-js.js"></script>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal_component">
+            <div class="modal_component_body">
+                <div class="modal_login">
+                    <form class="form_log" action="">
+                        <div>
+                            <input class="input id" type="text" placeholder="ID">
+                        </div>
+                        <div>
+                            <input class="input pw" type="text" placeholder="PW">
+                        </div>
+                        <div>
+                            <input class="btn_login" type="submit" value="로그인">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal_line"></div>
+                <div>
+                    <input class="btn_regist" type="submit" value="회원가입" onclick="go_reg()">
+                </div>
+                <div class="modal_Wrap">
+                    <form  class="form_reg" action="register.php" method="post">
+                        <div>ID: <input type="text" id="userId " name="userId" required></div>
+                        <div>PW: <input type="text" id="userPw" name="userPw"></div>
+                        <div>Name: <input type="text" id="userName" name="userName"></div>
+                        <div>Birth: <input type="text" id="userBirth" name="userBirth"></div>
+                        <div>Number: <input type="text" id="userNum" name="userNum"></div>
+                        <div><input type="submit" value="보내기" onclick="modalout()"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>

@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+}
+
+button {
+    padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.modal {
+    display: block;
+
+    position: fixed;
+    z-index: 1000;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.418);
+}
+
+.modal.show-modal{
+    display: none;
+}
+
+.modal_component {
+    font-size: 30px;
+    color: #212529;
+    line-height: 1.5;
+    border: 1px solid white;
+
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    width: 400px;
+    height: 400px;
+
+    background-color: white;
+    border-radius: 8px;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.modal_component_body {
+    /*margin-top: 32px;*/
+    text-align: center;
+}
+
+.modal_login{
+    margin: 0 20px 0 20px;
+
+    padding-top: 40px;
+}
+
+.input{
+    border-radius: 0;
+    border: 1px solid black;
+
+    padding: 10px;
+    padding-left: 15px;
+
+    width: 300px;
+    height: 50px;
+
+    font-size: 16px;
+    font: ;
+}
+
+.btn_login{
+    width: 300px;
+    height: 50px;
+
+    color: white;
+    background-color: rgb(55, 148, 215);
+
+    border: 0;
+
+    margin-top: 20px;
+
+    cursor: pointer;
+}
+
+.modal_line{
+    
+    height: 40px;
+
+    margin: 0 30px 0 30px;
+
+    border-bottom: 1px solid gray;
+}
+
+.btn_regist{
+    width: 300px;
+    height: 50px;
+
+    color: white;
+    background-color: rgb(35, 148, 215);
+
+    border: 0;
+
+    margin-top: 40px;
+
+    cursor: pointer;
+}
+
+.modal_Wrap {
+    margin-top: 44px;
+    text-align: center;
+    justify-content: center;
+
+    display: none;
+}
+
+.header_outer {
+    width: 100%;
+    min-width: 783px;
+    height: 60px;
+
+    background-color: black;
+    
+    position: relative;
+}
+
+.header_inner{
+    position: absolute;
+
+    bottom: 0;
+
+    display: flex;
+}
+
+.kk{
+    position: absolute;
+    
+    right: 300px;
+
+    bottom: 20px;
+}
+
+.hotbaby{
+    position: absolute;
+
+    right: 0;
+
+    bottom: 20px;
+}
+
+.root {
+    padding-top: 200px;
+
+    width: 1100px;
+
+    background-color: #eeffa0;
+
+    margin: 0 auto;
+
+    height: 100%;
+}
+
+.triangle {
+    width: 200px;
+    height: 45px;
+
+    border-bottom: 50px solid #eeffa0;
+    border-left: 100px solid #eeffa0;
+    border-right: 30px solid transparent;
+}
+
+.triangleb{
+    width: 200px;
+    height: 45px;
+
+    border-bottom: 50px solid #666666;
+    border-left: 100px solid #666666;
+    border-right: 30px solid transparent;
+
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
