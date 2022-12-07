@@ -30,8 +30,35 @@ a {
     text-decoration: none;
 }
 
+#modal{
+    transform: scale(1);
+}
+
+#modal.show-modal .modal_component {
+    background: transparent;
+    animation: fadeIn .5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal.show-modal .modal_component .modal_component_body {
+    opacity: 0;
+    animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal.show-modal.out {
+    /* 전체 모달 컨테이너를 숨김 처리(다른 애니메이션이 모두 끝난 0.5초 후에 처리하기 위해 0.5초 지연시킴 */
+    animation: quickScaleDown 0s .5s linear forwards;
+}
+
+#modal.show-modal.out .modal-component {
+    animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal.show-modal.out .modal-component .modal_component_body {
+    animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
 .modal {
-    display: block;
+    display: none;
 
     position: fixed;
     z-index: 1000;
@@ -46,7 +73,7 @@ a {
 }
 
 .modal.show-modal{
-    display: none;
+    display: block;
 }
 
 .modal_component {
@@ -137,6 +164,51 @@ a {
     justify-content: center;
 
     display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        background: transparent;
+    }
+
+    100% {
+        background: rgba(0, 0, 0, .7);
+    }
+}
+
+@keyframes scaleUp{
+    0% {
+        trnsform: scale(.8) translateY(1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleBack {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.8);
+    }
+}
+
+@keyframes quickScaleDown {
+    0% {
+        transform: scale(1);
+    }
+
+    99.9% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
 }
 
 .header_outer {

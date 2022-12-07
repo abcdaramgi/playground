@@ -1,35 +1,40 @@
-$(document).ready(function() {
-    var placeholderTarget = $('.textbox input[type="text"], .textbox input[type="password"]');
+/*const modal = document.getElementById('modal');
+const btnModal = document.getElementById('btn');
 
-    placeholderTarget.on('focus', function(){
-        $(this).siblings('label').fadeOut('fast');
-    });
+btnModal.addEventListener('click', () => {
 
-    placeholderTarget.on('focus', function(){
-        if($(this).val() == ''){
-            $(this).siblings('label').fadeOut('fast');
-        }
-    });
+    modal.classList.add('show-modal')
 });
 
-const modal = document.getElementsByClassName('modal');
-
-open.addEventListener('click', () => {
-  modal.classList.add('show-modal')
-})
-
-close.addEventListener('click', () => {
-    modal.classList.add('show-modal')
-})
-
 window.addEventListener('click', (e) => {
-    e.target === modal ? modal.classList.remove('show-modal') : false
+  e.target === modal ? modal.classList.remove('show-modal') : false
+//modal.classList.add('out')
 })
+*/
 
-function go_reg(){
-    const sel = document.getElementsByClassName('modal_login')[0];
-    const sel2 = document.getElementsByClassName('modal_Wrap')[0];
+var $button         = $('.btn_modal'),
+    $modalContainer = $('#modal'),
+    $body           = $('body');
 
-    sel.style.display = "none";
-    set2.style.display = "block";
-}
+$button.on('click', function () {
+  btnId = $(this).attr('id');
+  
+  $modalContainer
+      .removeAttr('class')
+      .addClass('show-modal');
+  $content
+      .removeAttr('class')
+      .addClass('content');
+  
+  $body.addClass('modal-active');  
+});
+
+$modalContainer.on('click', function () {
+  $(this).addClass('out');
+  $body.removeClass('modal-active');
+  if ($(this).hasClass('show-modal')) {
+    
+    $content.addClass('out');
+    
+  }
+});
